@@ -30,13 +30,13 @@ jobs:
               working-directory: frontend
 
             - name: docker login setup
-              uses: docker/login-actions@v4
+              uses: docker/login-action@v4
               with:
                 username: ${{ vars.DOCKERHUB_USERNAME}}
                 PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD}}
 
             - name: docker build and push
-              uses: docker/build-push-actions@v7
+              uses: docker/build-push-action@v7
               with:
                 context: ./frontend/Dockerfile
                 push: true
