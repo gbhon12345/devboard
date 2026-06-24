@@ -22,11 +22,11 @@ jobs:
               working-directory: frontend
 
             - name: run linter
-              run: npm lint
+              run: npm run lint
               working-directory: frontend
 
             - name: run Test
-              run: npm test
+              run: npm run test
               working-directory: frontend
 
             - name: docker login setup
